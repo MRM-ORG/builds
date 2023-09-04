@@ -475,6 +475,7 @@ Error generating stack: `+o.message+`
 `,Hu=Ti`
   border-radius: 12px;
   max-height: 100vh;
+  min-height: 80vh;
 
   @media (max-width: 768px) {
     border-radius: 0;
