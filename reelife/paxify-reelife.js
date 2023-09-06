@@ -167,7 +167,6 @@ Error generating stack: `+o.message+`
     font-size: 8px;
   }
 `,WS=V(zS)`
-  gap: 12px;
   max-width: 20vw;
   @media (max-width: 440px) {
     max-width: 35vw;
@@ -180,6 +179,10 @@ Error generating stack: `+o.message+`
   @media (max-width: 350px) {
     font-size: 11px;
     max-width: 23vw;
+  }
+
+  & p {
+    margin: 0;
   }
 `,GS=V.div`
   top: -100px;
@@ -196,7 +199,7 @@ Error generating stack: `+o.message+`
 `,KS=V.div`
   position: relative;
   bottom: -3px;
-`,QS=({story:e,handleCTAClick:t,toggleStoryLike:n,setShareOpen:r,handleShare:i,handlePromoClick:o,shareOpen:s,isHovering:l})=>{var a,u,c,d,p,h,v,y,k,f,m,g,w;return P.jsxs(FS,{children:[P.jsxs(YS,{$hover:l,children:[((a=e==null?void 0:e.layout)==null?void 0:a.likeButton)&&P.jsx(VS,{id:"like",onClick:S=>n(S),children:(u=e==null?void 0:e.layout)!=null&&u.isLiked?P.jsx(AS,{}):P.jsx($S,{})}),P.jsx(GS,{onClick:async S=>{S.stopPropagation(),r(!s),await i()},children:P.jsx(jS,{})}),P.jsxs(DS,{onClick:o,children:[P.jsx("img",{src:sm}),P.jsx(KS,{children:"By Paxify"})]})]}),((c=e==null?void 0:e.layout)==null?void 0:c.design)===1&&P.jsxs(BS,{gap:"12px",children:[P.jsx(bS,{src:(d=e==null?void 0:e.layout)==null?void 0:d.author}),P.jsxs(US,{gap:"25px",children:[P.jsxs(WS,{children:[P.jsx("div",{children:(p=e==null?void 0:e.layout)==null?void 0:p.title}),P.jsx("div",{children:(h=e==null?void 0:e.layout)==null?void 0:h.description})]}),((v=e==null?void 0:e.layout)==null?void 0:v.cta)&&P.jsx(HS,{background:(k=(y=e==null?void 0:e.layout)==null?void 0:y.cta)==null?void 0:k.backgroundColor,textColor:(m=(f=e==null?void 0:e.layout)==null?void 0:f.cta)==null?void 0:m.textColor,onClick:S=>{var T,x;t(S,(x=(T=e==null?void 0:e.layout)==null?void 0:T.cta)==null?void 0:x.link)},children:(w=(g=e==null?void 0:e.layout)==null?void 0:g.cta)==null?void 0:w.text})]})]})]})},XS=Q.memo(QS),qS=V.div`
+`,QS=({story:e,handleCTAClick:t,toggleStoryLike:n,setShareOpen:r,handleShare:i,handlePromoClick:o,shareOpen:s,isHovering:l})=>{var a,u,c,d,p,h,v,y,k,f,m,g,w;return P.jsxs(FS,{children:[P.jsxs(YS,{$hover:l,children:[((a=e==null?void 0:e.layout)==null?void 0:a.likeButton)&&P.jsx(VS,{id:"like",onClick:S=>n(S),children:(u=e==null?void 0:e.layout)!=null&&u.isLiked?P.jsx(AS,{}):P.jsx($S,{})}),P.jsx(GS,{onClick:async S=>{S.stopPropagation(),r(!s),await i()},children:P.jsx(jS,{})}),P.jsxs(DS,{onClick:o,children:[P.jsx("img",{src:sm}),P.jsx(KS,{children:"By Paxify"})]})]}),((c=e==null?void 0:e.layout)==null?void 0:c.design)===1&&P.jsxs(BS,{gap:"12px",children:[P.jsx(bS,{src:(d=e==null?void 0:e.layout)==null?void 0:d.author}),P.jsxs(US,{gap:"25px",children:[P.jsxs(WS,{children:[P.jsx("div",{dangerouslySetInnerHTML:{__html:(p=e==null?void 0:e.layout)==null?void 0:p.title}}),P.jsx("div",{dangerouslySetInnerHTML:{__html:(h=e==null?void 0:e.layout)==null?void 0:h.description}})]}),((v=e==null?void 0:e.layout)==null?void 0:v.cta)&&P.jsx(HS,{background:(k=(y=e==null?void 0:e.layout)==null?void 0:y.cta)==null?void 0:k.backgroundColor,textColor:(m=(f=e==null?void 0:e.layout)==null?void 0:f.cta)==null?void 0:m.textColor,onClick:S=>{var T,x;t(S,(x=(T=e==null?void 0:e.layout)==null?void 0:T.cta)==null?void 0:x.link)},children:(w=(g=e==null?void 0:e.layout)==null?void 0:g.cta)==null?void 0:w.text})]})]})]})},XS=Q.memo(QS),qS=V.div`
   flex-grow: 1;
   height: 4px;
   width: auto;
@@ -355,6 +358,7 @@ Error generating stack: `+o.message+`
   border-radius: 50%;
   padding: 2px;
   background-image: url(${({background:e})=>e});
+  background-size: cover;
   transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
 
   &:hover {
@@ -460,7 +464,7 @@ Error generating stack: `+o.message+`
   ${cm}
 `,Sx=V.div`
   position: relative;
-  min-height: 50vh;
+  min-height: 350px;
   width: ${e=>e.$isActive?"425px":"225px"};
 
   & img {
@@ -475,13 +479,15 @@ Error generating stack: `+o.message+`
 `,Hu=Ti`
   border-radius: 12px;
   max-height: 100vh;
-  min-height: 80vh;
 
   @media (max-width: 768px) {
     border-radius: 0;
   }
 `,xx=V.img`
   z-index: -1;
+  height: 100%;
+  min-height: 85vh;
+
   ${Hu}
 `,dm=V.img`
   top: 35%;
@@ -502,6 +508,7 @@ Error generating stack: `+o.message+`
 `,Ex=V.img`
   cursor: pointer;
   position: relative;
+  height: 350px;
   ${Hu}
 
   &:hover {
@@ -511,6 +518,9 @@ Error generating stack: `+o.message+`
 `,Tx=V.video`
   z-index: -1;
   object-fit: fill;
+  height: 85vh;
+  min-height: 85vh;
+
   ${Hu}
 `,fm=Ti`
   top: 45%;
