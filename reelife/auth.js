@@ -1,6 +1,6 @@
 async function requestVerification() {
   try {
-    await fetch("http://localhost:8000/auth/requestVerification", {
+    await fetch("https://subscriptions.paxify.io/auth/requestVerification", {
       method: "POST",
       headers: {
         Accept: "application/json",
