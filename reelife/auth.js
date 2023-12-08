@@ -1,6 +1,6 @@
 async function requestVerification() {
   try {
-    await fetch("https://subscriptions.paxify.io/auth/requestVerification", {
+    await fetch("https://backend.paxify.io/auth/requestVerification", {
       method: "PUT",
       headers: {
         Accept: "application/json",
